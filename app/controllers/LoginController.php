@@ -10,7 +10,7 @@
 		public function login() {
 			$input = Input::get();
 			$rules = [
-				'usenrame' => 'required',
+				'username' => 'required',
 				'password' => 'required'
 			];
 			$validator = Validator::make($input,$rules);
