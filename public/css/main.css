@@ -78,6 +78,25 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+header {
+  background: #eee;
+  height: 75px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+}
+.form-group input[type=text],
+.form-group input[type=password],
+.form-group input[type=submit] {
+  padding: 5px 10px;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
