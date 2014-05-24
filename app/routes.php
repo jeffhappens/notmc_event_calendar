@@ -6,6 +6,10 @@ Route::get('/login','LoginController@index');
 Route::post('/login','LoginController@login');
 Route::get('/logout','LoginController@logout');
 
+Route::get('/tweets', function() {
+	return Twitter::getUserTimeline(array('screen_name' => 'jeffreyamills', 'count' => 20, 'format' => 'json'));
+});
+
 
 
 Route::group(['before' => 'auth'], function() {
@@ -14,7 +18,7 @@ Route::group(['before' => 'auth'], function() {
 		// Admin routes
 	});
 
-	Route::group(['before' => 'isClient', function() {
+	Route::group(['before' => 'isClient'], function() {
 		// Client routes
 	});
 
