@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.1.*",
-		"boparaiamrit/facebook": "dev-master"
+		"boparaiamrit/facebook": "dev-master",
+		"thujohn/twitter": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
