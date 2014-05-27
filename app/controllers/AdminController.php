@@ -10,9 +10,10 @@
 					'Locations','Locations.LocationID','=','Venues.id'
 				)->join(
 					'Events','Venues.id','=','Events.venueId'
-				)->get()
+				)->join('EventDates','EventDates.event_id','=','Events.venueid')
+				->get()
 			);
 			return View::make('admin.index',$data);
 		}
-		
+
 	}

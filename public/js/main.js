@@ -8,4 +8,12 @@ $(function() {
 		}
 	})
 
+	$('img[data-error]').error(function() {
+		var error = $(this).data('error');
+		if(this.src !== error) {
+			this.src = error;
+		}
+	});
+
+
 })
