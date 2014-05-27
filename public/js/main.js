@@ -1,5 +1,5 @@
 $(function() {
-	$.ajax({
+/*	$.ajax({
 		type: 'POST',
 		url: '/tweets',
 		dataType: 'JSON',
@@ -10,4 +10,4 @@ $(function() {
 		}
 
 	})
-})
+*/})
