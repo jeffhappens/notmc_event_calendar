@@ -10,7 +10,7 @@
 					@foreach($users as $user)
 						<li>
 							@if($user->fName == 'admin')
-							{{ 'You' }} - {{ $user->fName }}
+							<b>{{ 'You' }}</b> - {{ $user->fName }}
 							@else
 							{{ $user->email }} - {{ $user->fName }} {{ $user->lName }}
 							@endif
