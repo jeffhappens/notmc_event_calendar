@@ -1,13 +1,11 @@
 $(function() {
-/*	$.ajax({
+	$.ajax({
 		type: 'POST',
-		url: '/tweets',
+		url: '/admin',
 		dataType: 'JSON',
 		success: function(data) {
-			$.each(data, function(key,value) {
-				console.log(value.text);
-			});			
+			console.log(data);
 		}
-
 	})
-*/})
+
+})
