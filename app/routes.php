@@ -17,10 +17,13 @@ Route::group(['before' => 'auth'], function() {
 	// Protected routes
 	Route::group(['before' => 'isAdmin'], function() {
 		// Admin routes
+		Route::get('/admin','AdminController@index');
+		Route::get('/admin/users','AdminController@showUsers');
 	});
 
 	Route::group(['before' => 'isClient'], function() {
 		// Client routes
+		Route::get('/client','ClientController@index');
 	});
 
 });

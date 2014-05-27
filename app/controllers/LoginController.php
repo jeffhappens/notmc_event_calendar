@@ -17,7 +17,15 @@
 
 			if($validator->passes()) {
 				if(Auth::attempt(['email' => $input['username'], 'password' => $input['password']])) {
-					return 'OK';
+					//return 'OK';
+					switch(Auth::user()->role) {
+						case 64:
+						return Redirect::to('/admin');
+						break;
+						case 32:
+						return Redirect::to('/client');
+						break;
+					}
 				}
 				Session::flash('error','Auth Failed');
 				return Redirect::to('/login');
