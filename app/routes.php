@@ -18,7 +18,6 @@ Route::group(['before' => 'auth'], function() {
 	Route::group(['before' => 'isAdmin'], function() {
 		// Admin routes
 		Route::get('/admin','AdminController@index');
-		Route::get('/admin/users','AdminController@showUsers');
 	});
 
 	Route::group(['before' => 'isClient'], function() {
@@ -41,6 +40,3 @@ Route::filter('isClient', function() {
 		return Redirect::to('/');
 	}
 });
-
-
-
