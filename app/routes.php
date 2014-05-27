@@ -38,3 +38,6 @@ Route::filter('isClient', function() {
 		return Redirect::to('/');
 	}
 });
+
+
+

@@ -14,8 +14,9 @@
 				'password' => 'required'
 			];
 			$validator = Validator::make($input,$rules);
+
 			if($validator->passes()) {
-				if(Auth::attempt(['username' => $input['username'], 'password' => $input['password']])) {
+				if(Auth::attempt(['email' => $input['username'], 'password' => $input['password']])) {
 					return 'OK';
 				}
 				Session::flash('error','Auth Failed');
