@@ -6,6 +6,11 @@ Route::get('/login','LoginController@index');
 Route::post('/login','LoginController@login');
 Route::get('/logout','LoginController@logout');
 
+
+Route::get('/search','SearchController@index');
+Route::post('/search','SearchController@search');
+
+
 Route::post('/tweets', function() {
 	$tweets = Twitter::getUserTimeline(array('screen_name' => 'jeffreyamills', 'count' => 20, 'format' => 'json'));
 	return $tweets;

@@ -1,9 +1,13 @@
 @include('includes.head')
 <body>
 	@include('includes.header')
+	@include('includes.alerts')
 	<section>
 		<div class="container">
-			<h1>Client Homepage</h1>
+			{{ Form::open(['url' => '/search', 'method' => 'post']) }}
+				{{ Form::text('search') }}
+				{{ Form::submit('Submit') }}
+			{{ Form::close() }}
 		</div>
 	</section>
 	@include('includes.footer')
