@@ -17,7 +17,6 @@
 
 			if($validator->passes()) {
 				if(Auth::attempt(['email' => $input['username'], 'password' => $input['password']])) {
-					//return 'OK';
 					switch(Auth::user()->role) {
 						case 64:
 						return Redirect::to('/admin');
@@ -27,11 +26,11 @@
 						break;
 					}
 				}
-				Session::flash('error','Auth Failed');
+				Session::flash( 'error', Config::get('strings.invalidCredentials') );
 				return Redirect::to('/login');
 			}
 			else {
-				Session::flash('error','Validation Failed');
+				Session::flash( 'error', Config::get('strings.allFieldsRequired') );
 				return Redirect::to('/login');
 
 			}
