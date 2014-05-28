@@ -18,10 +18,10 @@
 			if($validator->passes()) {
 				if(Auth::attempt(['email' => $input['username'], 'password' => $input['password']])) {
 					switch(Auth::user()->role) {
-						case 64:
+						case $_ENV['admin_priv_level']:
 						return Redirect::to('/admin');
 						break;
-						case 32:
+						case $_ENV['client_priv_level']:
 						return Redirect::to('/client');
 						break;
 					}
