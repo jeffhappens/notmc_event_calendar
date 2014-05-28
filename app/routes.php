@@ -30,13 +30,13 @@ Route::group(['before' => 'auth'], function() {
 
 // Route filters
 Route::filter('isAdmin', function() {
-	if(Auth::user()->role < 64) {
+	if(Auth::user()->role < $_ENV['admin_priv_level']) {
 		return Redirect::to('/');
 	}
 });
 
 Route::filter('isClient', function() {
-	if(Auth::user()->role < 32) {
+	if(Auth::user()->role < $_ENV['client_priv_level']) {
 		return Redirect::to('/');
 	}
 });
