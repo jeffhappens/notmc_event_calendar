@@ -7,7 +7,7 @@
 			$data = array(
 				'users' => User::get(),
 				'venues' => Venue::join(
-					'Locations','Locations.LocationID','=','Venues.id'
+					'Venues','Locations.LocationID','=','Venues.id'
 				)->join(
 					'Events','Venues.id','=','Events.venueId'
 				)->join('EventDates','EventDates.event_id','=','Events.venueid')

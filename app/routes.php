@@ -10,6 +10,8 @@ Route::get('/logout','LoginController@logout');
 Route::get('/search','SearchController@index');
 Route::post('/search','SearchController@search');
 
+Route::get('/venue/{id}','VenueController@index');
+
 
 Route::post('/tweets', function() {
 	$tweets = Twitter::getUserTimeline(array('screen_name' => 'jeffreyamills', 'count' => 20, 'format' => 'json'));

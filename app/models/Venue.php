@@ -2,6 +2,6 @@
 
 	class Venue extends Eloquent {
 
-		protected $table = 'Venues';
+		protected $table = 'Locations';
 
 	}

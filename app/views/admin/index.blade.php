@@ -3,24 +3,6 @@
 	@include('includes.header')
 	<section>
 		<div class="container">
-			<!-- <h1>Admin Homepage</h1> -->
-			<!-- <h3>Users</h3> -->
-			<!--
-			@if($users)
-				<ul>
-					@foreach($users as $user)
-						<li>
-							@if($user->fName == 'admin')
-							<b>{{ 'You' }}</b> - {{ $user->fName }}
-							@else
-							{{ $user->email }} - {{ $user->fName }} {{ $user->lName }}
-							@endif
-						</li>
-					@endforeach
-				</ul>
-			@endif
-			-->
-			<!-- <h3>Venues</h3> -->
 			@if($venues)
 				@foreach($venues as $venue)
 					<div class="venue" style="position: relative;">

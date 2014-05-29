@@ -89,7 +89,19 @@ p.heading {
 }
 header {
   background: #eee;
-  height: 75px;
+}
+section.sectionHeader {
+  height: 261px;
+  background: #000;
+}
+section.sectionHeader img {
+  display: none;
+  float: right;
+}
+section.sectionHeader h2 {
+  font-family: 'In The Know';
+  font-size: 48px;
+  color: #fff;
 }
 .form-group {
   margin-bottom: 20px;
