@@ -16,7 +16,7 @@
 			$validator = Validator::make($input,$rules);
 
 			if($validator->passes()) {
-				if(Auth::attempt(['email' => $input['username'], 'password' => $input['password']])) {
+				if(Auth::attempt(['email' => $input['username'], 'password' => $input['password'], 'confirmed' => 1])) {
 					switch(Auth::user()->role) {
 						case $_ENV['admin_priv_level']:
 						return Redirect::to('/admin');
@@ -40,5 +40,4 @@
 			Auth::logout();
 			return Redirect::to('/login');
 		}
-
 	}

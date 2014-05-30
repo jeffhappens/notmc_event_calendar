@@ -6,11 +6,17 @@ Route::get('/login','LoginController@index');
 Route::post('/login','LoginController@login');
 Route::get('/logout','LoginController@logout');
 
+Route::get('/register','RegisterController@index');
+Route::post('/register','RegisterController@register');
+Route::get('/verify/{email}/{token}','RegisterController@verify');
 
 Route::get('/search','SearchController@index');
 Route::post('/search','SearchController@search');
 
 Route::get('/venue/{id}','VenueController@index');
+
+
+//Route::get('/email','MailController@index');
 
 
 Route::post('/tweets', function() {

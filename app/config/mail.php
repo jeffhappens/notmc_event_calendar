@@ -28,7 +28,8 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	//'host' => 'smtp.mailgun.org',
+	'host' => $_ENV['email_host'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +55,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => array('address' => $_ENV['email_sender_address'], 'name' => $_ENV['email_sender_name']),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +81,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => $_ENV['email_username'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +94,7 @@ return array(
 	|
 	*/
 
-	'password' => null,
+	'password' => $_ENV['email_password'],
 
 	/*
 	|--------------------------------------------------------------------------

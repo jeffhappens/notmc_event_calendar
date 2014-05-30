@@ -4,18 +4,18 @@
 	@include('includes.alerts')
 	<section>
 		<div class="container">
-			<h2>Log in to your account</h2>
-			{{ Form::open(['url' => '/login', 'method' => 'post']) }}
+			<h2>Create an Account</h2>
+			{{ Form::open(['url' => '/register', 'method' => 'post']) }}
 				<div class="form-group">
-					{{ Form::label('username','Username') }}
-					{{ Form::text('username') }}
+					{{ Form::label('email','Email Address') }}
+					{{ Form::text('email') }}
 				</div>
 				<div class="form-group">
 					{{ Form::label('password','Password') }}
 					{{ Form::password('password') }}
 				</div>
 				<div class="form-group">
-					{{ Form::submit('Log In') }}
+					{{ Form::submit('Register') }}
 				</div>
 			{{ Form::close() }}
 		</div>
